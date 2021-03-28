@@ -25,9 +25,12 @@ class AdminController extends Controller
         $countuser= user::count();
         return view('admin.pengaduan',compact('pengaduans','countdata','countrespon', 'countuser'));
     }
-    // public function users()
-    // {
-    //     $users = User::all();
-    //     return view('admin.user',compact('users'));
-    // }
+    public function tanggapan()
+    {
+        $tanggapans = tanggapan::all();
+        $countdata = pengaduan::count();
+        $countrespon= tanggapan::count();
+        $countuser= user::count();
+        return view('admin.tanggapan',compact('tanggapans','countdata','countrespon', 'countuser'));
+    }
 }

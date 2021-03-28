@@ -41,6 +41,6 @@ class HomeController extends Controller
         $countdata = pengaduan::count();
         $countrespon= tanggapan::count();
         $countuser= user::count();
-        return view('admin.dashboard',compact('countdata','countrespon', 'countuser'));
+        return view('admin.pengaduan',compact('countdata','countrespon', 'countuser'));
     }
 }

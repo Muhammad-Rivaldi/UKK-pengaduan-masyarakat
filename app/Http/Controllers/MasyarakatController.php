@@ -39,6 +39,6 @@ class MasyarakatController extends Controller
             'foto' => $imageName,
             'status' => 'masuk'
         ]);
-        return redirect('/pengaduan/list');
+        return redirect('/pengaduans')->with('status', 'berhasil melakukan pengaduan!');
     }
 }

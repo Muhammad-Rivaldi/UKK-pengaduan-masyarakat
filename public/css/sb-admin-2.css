@@ -10803,13 +10803,13 @@ a:focus {
 }
 
 .bg-login-image {
-  background: url("../img/Wavy_Tech-28_Single-10.jpg");
+  background: url("../img/auth.png");
   background-position: center;
   background-size: cover;
 }
 
 .bg-register-image {
-  background: url("../img/Wavy_Tech-01_Single-12.jpg");
+  background: url("../img/auth.png");
   background-position: center;
   background-size: cover;
 }

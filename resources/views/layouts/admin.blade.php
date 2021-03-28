@@ -47,6 +47,7 @@
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">
           <!-- Nav items -->
           <ul class="navbar-nav">
+            @if(Auth::user()->roles==3)
             <li class="nav-item">
               <a class="nav-link" href="{{route('dashboardadmin')}}">
                 <i class="ni ni-tv-2 text-primary"></i>
@@ -59,6 +60,7 @@
                 <span class="nav-link-text">Users</span>
               </a>
             </li>
+            @endif
             <li class="nav-item">
               <a class="nav-link" href="{{route('listpengaduanadmin')}}">
                 <i class="ni ni-email-83 text-green"></i>
@@ -66,7 +68,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="examples/map.html">
+              <a class="nav-link" href="{{route('listtanggapan')}}">
                 <i class="ni ni-pin-3 text-primary"></i>
                 <span class="nav-link-text">Tanggapan</span>
               </a>
@@ -189,7 +191,7 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">total users</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">total user</h5>
                       <span class="h2 font-weight-bold mb-0">{{$countuser}}</span>
                     </div>
                     <div class="col-auto">

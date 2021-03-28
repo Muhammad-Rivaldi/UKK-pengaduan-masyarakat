@@ -45,6 +45,7 @@ route::post('/pengaduan/store','MasyarakatController@store')->name('nulispengadu
 Route::get('/admin', 'HomeController@dashboardAdmin')->name('dashboardadmin');
 Route::get('/admin/user', 'AdminController@user')->name('listuser');
 Route::get('/admin/pengaduan', 'AdminController@pengaduan')->name('listpengaduanadmin');
+Route::get('/admin/tanggapan', 'AdminController@tanggapan')->name('listtanggapan');
 
 
 // route petugas

@@ -112,6 +112,8 @@
       <main class="py-4">
         @yield('content')
       </main>
+
+      <!-- footer -->
       <footer id="footer">
 
         <div class="footer-top">
@@ -138,7 +140,9 @@
             Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
           </div>
         </div>
-      </footer><!-- End Footer -->
+      </footer>
+      <!-- End Footer -->
+
   </div>
   </header>
 </body>
