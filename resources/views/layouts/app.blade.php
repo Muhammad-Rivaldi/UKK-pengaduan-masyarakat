@@ -58,49 +58,53 @@
               <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->
                 @guest
-                <li class="nav-item" data-aos="fade-left">
-                  <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                </li>
-                @if (Route::has('register'))
-                <li class="nav-item" data-aos="fade-left">
-                  <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                </li>
-                @endif
-                @else
-                <li class="nav-item" data-aos="fade-left">
-                  <a class="nav-link" href="{{ route('dashboardmasyarakat') }}">Tulis Pengaduan</a>
-                </li>
+                  <li class="nav-item" data-aos="fade-left">
+                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                  </li>
+                  @if (Route::has('register'))
+                  <li class="nav-item" data-aos="fade-left">
+                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                  </li>
+                  @endif
+                  @else
+                  <li class="nav-item" data-aos="fade-left">
+                    <a class="nav-link" href="{{ route('dashboardmasyarakat') }}">Tulis Pengaduan</a>
+                  </li>
 
-                <!-- condition page -->
-                @if(Auth::user()->roles==1)
-                <li class="nav-item" data-aos="fade-left">
-                  <a class="nav-link" href="{{ route('listpengaduan',Auth::user()->nik) }}">pengaduan anda</a>
-                </li>
-                @elseif(Auth::user()->roles==2 && Auth::user()->roles==3)
-                <li class="nav-item" data-aos="fade-left">
-                  <a class="nav-link" href="{{ route('listpengaduanadmin') }}">Seluruh Pengaduan</a>
-                </li>
-                @endif
-                <!-- end condition page -->
+                  <!-- condition page -->
+                  @if(Auth::user()->roles==1)
+                  <li class="nav-item" data-aos="fade-left">
+                    <a class="nav-link" href="{{ route('listpengaduan',Auth::user()->nik) }}">pengaduan anda</a>
+                  </li>
+                  @elseif(Auth::user()->roles==2)
+                  <li class="nav-item" data-aos="fade-left">
+                    <a class="nav-link" href="{{ route('dashboardpetugas') }}">Seluruh Pengaduan</a>
+                  </li>
+                  @else
+                  <li class="nav-item" data-aos="fade-left">
+                    <a class="nav-link" href="{{ route('listpengaduanadmin') }}">Seluruh Pengaduan</a>
+                  </li>
+                  @endif
+                  <!-- end condition page -->
 
 
-                <li class="drop-down" data-aos="fade-left">
-                  <a href="#">
-                    {{ Auth::user()->name }}
-                  </a>
-                  <ul>
-                    <li>
-                      <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                                           document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                      </a>
+                  <li class="drop-down" data-aos="fade-left">
+                    <a href="#">
+                      {{ Auth::user()->name }}
+                    </a>
+                    <ul>
+                      <li>
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                          {{ __('Logout') }}
+                        </a>
 
-                      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                      </form>
-                    </li>
-                  </ul>
-                </li>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                          @csrf
+                        </form>
+                      </li>
+                    </ul>
+                  </li>
                 @endguest
               </ul>
 

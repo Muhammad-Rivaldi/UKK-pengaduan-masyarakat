@@ -38,9 +38,10 @@ class HomeController extends Controller
     }
     public function dashboardPetugas()
     {
+        $pengaduans = Pengaduan::all();
         $countdata = pengaduan::count();
         $countrespon= tanggapan::count();
         $countuser= user::count();
-        return view('admin.pengaduan',compact('countdata','countrespon', 'countuser'));
+        return view('admin.pengaduan',compact('pengaduans','countdata','countrespon', 'countuser'));
     }
 }

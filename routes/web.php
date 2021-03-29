@@ -46,6 +46,8 @@ Route::get('/admin', 'HomeController@dashboardAdmin')->name('dashboardadmin');
 Route::get('/admin/user', 'AdminController@user')->name('listuser');
 Route::get('/admin/pengaduan', 'AdminController@pengaduan')->name('listpengaduanadmin');
 Route::get('/admin/tanggapan', 'AdminController@tanggapan')->name('listtanggapan');
+Route::get('/admin/beritanggapan/{id}', 'AdminController@beritanggapan')->name('beritanggapan');
+Route::get('/admin/submittanggapan', 'AdminController@submittanggapan')->name('submittanggapan');
 
 
 // route petugas
