@@ -168,7 +168,7 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">Total Tanggapan</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">Total Pengaduan di Tanggapi</h5>
                       <span class="h2 font-weight-bold mb-0">{{$countrespon}}</span>
                     </div>
                     <div class="col-auto">

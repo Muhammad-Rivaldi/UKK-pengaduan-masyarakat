@@ -26,11 +26,10 @@
           @foreach ($tanggapans as $key => $tanggapan)
           <tr>
             <td>{{$key +1}}</td>
-            <td scope="row">{{$tanggapan->nik}}</td>
-            <td>{{$tanggapan->judul_tanggapan}}</td>
-            <td>{{$tanggapan->isi_tanggapan}}</td>
+            <td>{{$tanggapan->id_pengaduan}}</td>
+            <td>{{$tanggapan->id_petugas}}</td>
             <td>{{$tanggapan->tgl_tanggapan}}</td>
-            <td>{{$tanggapan->kota}}</td>
+            <td>{{$tanggapan->isi_tanggapan}}</td>
           </tr>
           @endforeach
         </tbody>

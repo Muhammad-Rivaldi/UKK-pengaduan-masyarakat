@@ -38,7 +38,7 @@ class HomeController extends Controller
     }
     public function dashboardPetugas()
     {
-        $pengaduans = Pengaduan::all();
+        $pengaduans = Pengaduan::orderByDesc('pengaduans'.'tgl_pengaduan');
         $countdata = pengaduan::count();
         $countrespon= tanggapan::count();
         $countuser= user::count();

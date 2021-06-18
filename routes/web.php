@@ -40,15 +40,18 @@ Route::get('/pengaduans', 'MasyarakatController@pengaduan')->name('dashboardmasy
 Route::get('/pengaduan/list/{nik}', 'MasyarakatController@index')->name('listpengaduan');
 route::post('/pengaduan/store','MasyarakatController@store')->name('nulispengaduan');
 
-
 // route admin
 Route::get('/admin', 'HomeController@dashboardAdmin')->name('dashboardadmin');
 Route::get('/admin/user', 'AdminController@user')->name('listuser');
 Route::get('/admin/pengaduan', 'AdminController@pengaduan')->name('listpengaduanadmin');
 Route::get('/admin/tanggapan', 'AdminController@tanggapan')->name('listtanggapan');
 Route::get('/admin/beritanggapan/{id}', 'AdminController@beritanggapan')->name('beritanggapan');
-Route::get('/admin/submittanggapan', 'AdminController@submittanggapan')->name('submittanggapan');
+Route::post('/admin/submittanggapan', 'AdminController@submittanggapan')->name('submittanggapan');
 
 
 // route petugas
 Route::get('/petugas', 'HomeController@dashboardPetugas')->name('dashboardpetugas');
+
+// route generate pdf
+Route::get('/getpdf', 'GenerateController@generatePDF')->name('pdfgenerate');
+Route::get('/viewpdf', 'GenerateController@view')->name('viewgenerate');

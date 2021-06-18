@@ -47,17 +47,15 @@ class AdminController extends Controller
             'isi_tanggapan' => 'required|min:10',
         ]);
 
-        tanggapan::create([
+        Tanggapan::create([
             'id_pengaduan' => $req->id_pengaduan,
             'id_petugas' => Auth::user()->id,
             'tgl_tanggapan' => $req->tgl_tanggapan,
             'isi_tanggapan' => $req->isi_tanggapan
         ]);
 
-        pengaduan::update([
-            'id' => $req->id_pengaduan,
-            'status' => 'selesai'
-        ]);
+        pengaduan::where('id',$req->id_pengaduan)->update(['status' => 'selesai']);
+        
         return redirect('/petugas');
     }
 }

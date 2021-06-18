@@ -8,6 +8,11 @@
         <div class="col">
           <h3 class="mb-0">Pengaduan Table</h3>
         </div>
+        <div class="d-flex-right">
+          <a href="{{route('pdfgenerate')}}">
+            <button type="button" class="btn btn-success">print PDF</button>
+          </a>
+        </div>
       </div>
     </div>
     <div class="table-responsive">
@@ -37,7 +42,11 @@
             <td>{{$pengaduan->kota}}</td>
             <td><img src="/pengaduan/{{$pengaduan->foto}}" alt="" height="150"></td>
             <td>{{$pengaduan->status}}</td>
+            @if($pengaduan->status == "selesai")
+            <td><a href="{{route('beritanggapan',$pengaduan->id)}}"><button type="button" class="btn btn-primary" disabled> Sudah Tanggapi</button></a></td>
+            @else
             <td><a href="{{route('beritanggapan',$pengaduan->id)}}"><button type="button" class="btn btn-primary">Tanggapi</button></a></td>
+            @endif
           </tr>
           @endforeach
         </tbody>

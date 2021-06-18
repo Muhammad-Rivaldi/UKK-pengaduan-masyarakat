@@ -351,7 +351,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h1 {
-  margin: 0 0 15px 0;
+  margin: 0 0 12px 0;
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
@@ -1294,7 +1294,7 @@ section {
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 100px 0;
+  padding: 90px 0;
 }
 
 #footer .footer-top h3 {

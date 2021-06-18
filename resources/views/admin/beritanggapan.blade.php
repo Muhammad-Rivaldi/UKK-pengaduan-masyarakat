@@ -31,7 +31,7 @@
 
             <!-- field tanggal -->
             <div class="form-group">
-              <label for="exampleFormControlInput1">Tanggal pengaduan</label>
+              <label for="exampleFormControlInput1">Tanggal Tanggapan</label>
               <input type="date" name="tgl_tanggapan" class="form-control" id="exampleFormControlInput1">
             </div>
 
