@@ -30,7 +30,7 @@
             <!-- field tanggal -->
             <div class="form-group">
               <label for="exampleFormControlInput1">Tanggal pengaduan</label>
-              <input type="date" name="tgl_pengaduan" class="form-control" id="exampleFormControlInput1">
+              <input type="date" value="{{ date('Y-m-d') }}" name="tgl_pengaduan" class="form-control" id="exampleFormControlInput1">
             </div>
 
             <!-- field kota -->
